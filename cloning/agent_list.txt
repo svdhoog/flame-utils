@@ -1,0 +1,5 @@
+Firm
+Government
+Household
+Mall
+Bank 

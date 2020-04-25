@@ -1,0 +1,41 @@
+CHANGELOG
+Author: Sander van der Hoog, svdhoog@gmail.com
+Date: 15 Oct 2018
+
+* header.tmpl:
+- Added min, max values
+
+#define FLAME_INT_MAX (int)1e+12
+#define FLAME_DOUBLE_MAX 1e+12
+#define FLAME_INT_MIN (int)-1e+12
+#define FLAME_DOUBLE_MIN -1e+12
+
+* memory.tmpl
+- At write-out of memvars, check whether the values are out-of-bounds:
+
+<?foreach xagent?><?if allvar_in_agent?>	if(current_xmachine->xmachine_$name)
+  {
+  	assert($allvar_name < FLAME_DOUBLE_MAX);
+  	assert($allvar_name > FLAME_DOUBLE_MIN);
+  	...
+
+* xml.tmpl
+- For all array types, check whether values exceed bounds:
+- Example for static arrays of float
+
+void write_float_static_array(FILE *file, float * temp, int size)
+{
+	int i;
+	char data[1000];
+
+	fputs("{", file);
+	for(i=0; i<size; i++)
+	{
+		assert(temp[i] < FLAME_DOUBLE_MAX);
+		assert(temp[i] > FLAME_DOUBLE_MIN);
+		sprintf(data, "%f", temp[i]);
+		fputs(data, file);
+		if(i < size-1) fputs(", ", file);
+	}
+	fputs("}", file);
+}

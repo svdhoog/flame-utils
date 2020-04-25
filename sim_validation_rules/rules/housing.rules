@@ -1,0 +1,91 @@
+# (Example rules for sim_validator)
+#
+# $Id: test.rules 1892 2009-06-18 16:08:55Z lsc $
+# 
+# Copyright (c) 2009 STFC Rutherford Appleton Laboratory 
+# Author: Lee-Shawn Chin 
+# Date  : June 2009
+# 
+# NOTE: This is a proof-of-concept implementation. It was not designed for
+#       production use but merely to explore what is possible
+#       Use at your own risk ;)
+#
+# Edited: Simon Gemkow
+# Date  : February 2010
+#
+#########################################################################
+::VARIABLES
+
+################################AGENT: HOUSEHOLD
+#HOUSEHOLD_STOCK
+household_payment_account                   = Household(household_stocks_calendar.payment_account)
+
+#These rules cannot be checked yet: no 2-level nested data structures implemented
+#household_bs_total_mortgages 			= Household(household_balance_sheet_calendar.mortgage.initial_value)
+#household_stocks_total_mortgages 		= Household(household_stocks_calendar.mortgage.initial_value)
+
+#HOUSEHOLD_OUTFLOWS
+household_consumption_expenditure           = Household(household_outflows_calendar.consumption_expenditure)
+household_outflows_mortgage_principle 		= Household(household_outflows_calendar.mortgage_principle) 
+household_outflows_mortgage_interest 		= Household(household_outflows_calendar.mortgage_interest)
+
+#HOUSEHOLD_INFLOWS
+household_wage                              = Household(household_inflows_calendar.wage)
+household_inflows_new_mortgages 			= Household(household_inflows_calendar.mortgage_loan_value)
+
+################################AGENT: BANK
+#BANK_STOCK
+bank_cash                                   = Bank(bank_stocks_calendar.cash)
+
+#These rules cannot be checked yet: no 2-level nested data structures implemented
+#bank_bs_total_mortgages      				= Bank(bank_balance_sheet_calendar.stocks.total_mortgages)
+#bank_stocks_total_mortgages      			= Bank(bank_stocks_calendar.stocks.total_mortgages)
+
+#BANK_OUTFLOWS
+bank_firm_loan_issues                       = Bank(bank_outflows_calendar.firm_loan_issues)
+bank_outflows_new_mortgages     			= Bank(bank_outlows_calendar.mortgage_loan_issues)
+
+#BANK_INFLOWS
+bank_received_loan_installment              = Bank(bank_inflows_calendar.firm_loan_installments)
+bank_inflows_mortgage_payments       		= Bank(bank_inflows_calendar.mortgage_payments)
+
+#########################################################################
+::CONSTANTS
+
+# while not necessary, using all caps for constants help us to identify
+# them within the rules
+PRECISION = 1.0 # tolerance when comparing doubles
+
+#########################################################################
+::RULES
+
+
+########################## Balance Sheets ################################
+# see file xeurace.rules
+
+########################## Internal accounting ################################
+# see file xeurace.rules
+
+########################## Monetary flows between Agents ################################
+##################### BANKS and HOUSEHOLDS
+#RULE 1: #These rules cannot be checked yet: no 2-level nested data structures implemented
+#Total mortgages: household balance sheet liabilities equals bank balance sheet assets (balance sheet struct)
+# household_bs_total_mortgages = bank_bs_total_mortgages
+#abs( household_bs_total_mortgages - bank_bs_total_mortgages) < PRECISION 
+
+#RULE 2: #These rules cannot be checked yet: no 2-level nested data structures implemented
+#Total mortgages: household balance sheet liabilities equals bank balance sheet assets (separate variables)
+# household_stocks_total_mortgages = bank_stocks_total_mortgages
+#abs( household_stocks_total_mortgages - bank_stocks_total_mortgages) < PRECISION 
+
+#RULE 3:
+#New mortgage issues: household inflows equal bank outflows:
+# household_inflows_new_mortgages = bank_outflows_new_mortgages
+abs( household_inflows_new_mortgages - bank_outflows_new_mortgages) < PRECISION 
+
+#RULE 4:
+#Monthly mortgage payments: household outflows equal bank inflows:
+# household_outflows_mortgage_principle + household_outflows_mortgage_interest = bank_inflows_mortgage_payments
+abs( household_outflows_mortgage_principle + household_outflows_mortgage_interest - bank_inflows_mortgage_payments) < PRECISION 
+
+

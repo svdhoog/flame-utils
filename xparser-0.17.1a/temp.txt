@@ -1,0 +1,18 @@
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ../../Financial_Fragility_Network_Model_2.0/ECB_Model/Housing_Market/centralized_auction/ClearingHouse_Functions.c
+	modified:   ../../scripts/R_scripts_new_order/Data_Analysis_GUI_4.0_parallel/Configure.r
+	modified:   ../../scripts/exp_template_3.0/main/launching/launch.sh
+	modified:   ../../scripts/exp_template_3.0/main/sampling/sample_housing_benchmark_real.csv
+	modified:   ../../scripts/exp_template_3.0/main/settings/exp_settings.sh
+	modified:   ../../scripts/exp_template_3.0/main/settings/set_exp.sh
+	modified:   xml.tmpl
+	modified:   ../../../docs/benchmark_plots/ECB_Housing_Model/Housing_Market_Results_17May2018/README
+	modified:   ../../../docs/benchmark_plots/ECB_Housing_Model/Housing_Market_Results_17May2018/create_all_PDFs.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")

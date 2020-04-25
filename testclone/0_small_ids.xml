@@ -1,0 +1,821 @@
+<states>
+<itno>0</itno>
+<environment>
+<total_regions>1</total_regions>
+<print_log>0</print_log>
+<print_debug_afm>0</print_debug_afm>
+<print_debug_exp1>0</print_debug_exp1>
+<print_debug_file_exp1>0</print_debug_file_exp1>
+<print_debug_file_exp2>0</print_debug_file_exp2>
+<policy_exp1>0</policy_exp1>
+<print_debug_gov>0</print_debug_gov>
+<print_debug_andrea>0</print_debug_andrea>
+<print_debug_credit>0</print_debug_credit>
+<print_debug_consumption>0</print_debug_consumption>
+<print_debug>0</print_debug>
+<policy_exp_energy_shock>0</policy_exp_energy_shock>
+<policy_exp_stabilization_subsidy>0</policy_exp_stabilization_subsidy>
+<policy_exp_stabilization_tax>0</policy_exp_stabilization_tax>
+<const_bankruptcy_idle_period>240</const_bankruptcy_idle_period>
+<days_per_month>20</days_per_month>
+<number_of_banks_to_apply>2</number_of_banks_to_apply>
+<const_number_of_banks>2</const_number_of_banks>
+<const_installment_periods>24</const_installment_periods>
+<const_wage_wealth_ratio>0.2</const_wage_wealth_ratio>
+<const_firm_leverage>2.0</const_firm_leverage>
+<const_income_tax_rate>0.05</const_income_tax_rate>
+<ecb_interest_rate>0.05</ecb_interest_rate>
+<alfa>10.0</alfa>
+<debt_rescaling_factor>0.8</debt_rescaling_factor>
+<target_leverage_ratio>2.0</target_leverage_ratio>
+<target_liquidity_ratio>1.5</target_liquidity_ratio>
+<const_dividend_earnings_ratio>0.1</const_dividend_earnings_ratio>
+<trading_activity>0.0</trading_activity>
+<bonds_newissue_discount>0.01</bonds_newissue_discount>
+<couponperiodicitynrmonths>1</couponperiodicitynrmonths>
+<fundamental_return_weight_min>0.1</fundamental_return_weight_min>
+<days_in_month>20</days_in_month>
+<symmetric_shock>1</symmetric_shock>
+<energy_shock_start>1240</energy_shock_start>
+<energy_shock_end>1480</energy_shock_end>
+<const_energy_shock_intensity>0.05</const_energy_shock_intensity>
+<energy_shock_frequency>20</energy_shock_frequency>
+<transition_phase>1000</transition_phase>
+<innovation_by_random>0</innovation_by_random>
+<initial_frontier_firm_transition_phase>1.5</initial_frontier_firm_transition_phase>
+<initial_productivity_firm>1.5</initial_productivity_firm>
+<initial_specific_skills>1.5</initial_specific_skills>
+<strenght_of_tech_progress>1</strenght_of_tech_progress>
+<igfirm_switch_on>0</igfirm_switch_on>
+<igfirm_employer_debug>0</igfirm_employer_debug>
+<igfirm_fin_man_debug>0</igfirm_fin_man_debug>
+<igfirm_producer_debug>0</igfirm_producer_debug>
+<gamma_const>-7.5</gamma_const>
+<alpha>0.662</alpha>
+<beta>0.338</beta>
+<depreciation_rate>0.01</depreciation_rate>
+<mark_up>0.1</mark_up>
+<ig_mark_up>0.15</ig_mark_up>
+<lambda>0.5</lambda>
+<ig_lambda>0.5</ig_lambda>
+<wage_update>0.01</wage_update>
+<min_vacancy>2</min_vacancy>
+<wage_reservation_update>0.01</wage_reservation_update>
+<region_cost>0.0</region_cost>
+<target_savings_rate>0.1</target_savings_rate>
+<carrol_consumption_parameter>0.01</carrol_consumption_parameter>
+<quantil_normal_distribution>0.842</quantil_normal_distribution>
+<firm_planning_horizon>10</firm_planning_horizon>
+<inv_inertia>2.5</inv_inertia>
+<adaption_delivery_volume>0.1</adaption_delivery_volume>
+<additional_capital_good_production>0.1</additional_capital_good_production>
+<production_productivity>1.0</production_productivity>
+<delivery_prob_if_critical_stock_0>25.0</delivery_prob_if_critical_stock_0>
+<igfirm_exogenous_innovation_probability>10.0</igfirm_exogenous_innovation_probability>
+<productivity_progress>0.025</productivity_progress>
+<igfirm_exogenous_productivity_progress>0.025</igfirm_exogenous_productivity_progress>
+<lower_bound_firing>0</lower_bound_firing>
+<upper_bound_firing>10</upper_bound_firing>
+<logit_parameter_specific_skills>0.0</logit_parameter_specific_skills>
+<logit_parameter_general_skills>0.5</logit_parameter_general_skills>
+<efficiency_innovation>1.0</efficiency_innovation>
+<skill_upgrade_predetermined>1</skill_upgrade_predetermined>
+<skill_upgrade_parameter>0.05613</skill_upgrade_parameter>
+<gov_policy_unemployment_benefit_pct>0.7</gov_policy_unemployment_benefit_pct>
+<gov_policy_money_financing_fraction>0.0</gov_policy_money_financing_fraction>
+<gov_policy_gdp_fraction_consumption>0.0</gov_policy_gdp_fraction_consumption>
+<gov_policy_gdp_fraction_investment>0.0</gov_policy_gdp_fraction_investment>
+<no_regions_per_gov>1</no_regions_per_gov>
+<subsidy_trigger_on>0.03</subsidy_trigger_on>
+<subsidy_trigger_off>0.03</subsidy_trigger_off>
+<gov_policy_swith_quantitative_easing>1</gov_policy_swith_quantitative_easing>
+</environment>
+<xagent>
+<name>Firm</name>
+  <cpi>0.0</cpi>
+  <mean_wage>1.0</mean_wage>
+  <needed_capital_stock>0.0</needed_capital_stock>
+  <actual_cap_price>1.5</actual_cap_price>
+  <mean_specific_skills>1.5</mean_specific_skills>
+  <planned_production_quantity>0.0</planned_production_quantity>
+  <production_quantity>0.0</production_quantity>
+  <planned_output>0.0</planned_output>
+  <output>0.0</output>
+  <unit_costs>0.0</unit_costs>
+  <total_supply>0.0</total_supply>
+  <production_costs>0.0</production_costs>
+  <revenue_per_day>0.0</revenue_per_day>
+  <linear_regression_estimators>{{REPLACE_ID_7,0.0,0.0,0.0}}</linear_regression_estimators>
+  <technological_frontier>1.5</technological_frontier>
+  <cum_revenue>0.0</cum_revenue>
+  <malls_sales_statistics>{{REPLACE_ID_7,{{1,2.94402589505},{2,2.94402589505},{3,2.94402589505},{4,2.94402589505},{5,2.94402589505},{6,2.94402589505},{7,2.94402589505},{8,2.94402589505},{9,2.94402589505},{10,2.94402589505}}}}</malls_sales_statistics>
+  <quality>1.0</quality>
+  <price>1.0</price>
+  <price_last_month>0.0</price_last_month>
+  <demand_capital_stock>0.0</demand_capital_stock>
+  <planned_production_costs>0.0</planned_production_costs>
+  <adaption_production_volume_due_to_insufficient_finances>0.02</adaption_production_volume_due_to_insufficient_finances>
+  <fraction_reserved_for_delayed_payments>0.0</fraction_reserved_for_delayed_payments>
+  <sold_quantities>{{REPLACE_ID_7,2.94402589505,0,0.0}}</sold_quantities>
+  <total_sold_quantity>0.0</total_sold_quantity>
+  <cum_total_sold_quantity>0.0</cum_total_sold_quantity>
+  <sold_quantity_in_calendar_month>0.0</sold_quantity_in_calendar_month>
+  <delivery_volume>{{REPLACE_ID_7,1.0,0.0,0.0}}</delivery_volume>
+  <planned_delivery_volume>{{REPLACE_ID_7,1.0,0.0,0.0}}</planned_delivery_volume>
+  <current_mall_stocks>{{REPLACE_ID_7,2.94402589505,0.0}}</current_mall_stocks>
+  <last_planned_production_quantities>{2.94402589505,2.94402589505,2.94402589505,2.94402589505,2.94402589505}</last_planned_production_quantities>
+  <total_external_financing_obtained>0.0</total_external_financing_obtained>
+  <capital_costs>0.0</capital_costs>
+  <labour_costs>0.0</labour_costs>
+  <capital_financing>{{0.00612688821752,0},{0.00612688821752,1},{0.00612688821752,2},{0.00612688821752,3},{0.00612688821752,4},{0.00612688821752,5},{0.00612688821752,6},{0.00612688821752,7},{0.00612688821752,8},{0.00612688821752,9},{0.00612688821752,10},{0.00612688821752,11},{0.00612688821752,12},{0.00612688821752,13},{0.00612688821752,14},{0.00612688821752,15},{0.00612688821752,16},{0.00612688821752,17},{0.00612688821752,18},{0.00612688821752,19},{0.00612688821752,20},{0.00612688821752,21},{0.00612688821752,22},{0.00612688821752,23}}</capital_financing>
+  <financial_resources_for_production>0.0</financial_resources_for_production>
+  <planned_value_capital_stock>0.0</planned_value_capital_stock>
+  <total_units_local_inventory>0.0</total_units_local_inventory>
+  <calc_capital_costs>0.0</calc_capital_costs>
+  <calc_production_costs>0.0</calc_production_costs>
+  <firm_productivity>1.5</firm_productivity>
+  <firm_productivity_last_year>0.0</firm_productivity_last_year>
+  <firm_productivity_progress>0.0</firm_productivity_progress>
+  <set_of_lenders>{{REPLACE_ID_9,0},{REPLACE_ID_10,0}}</set_of_lenders>
+  <number_of_banks_asked>0</number_of_banks_asked>
+  <ebit>0.0</ebit>
+  <earnings>0.0</earnings>
+  <tax_rate_corporate>0.0</tax_rate_corporate>
+  <tax_rate_vat>0.0</tax_rate_vat>
+  <tax_payment>0.0</tax_payment>
+  <tax_payment_in_calendar_month>0.0</tax_payment_in_calendar_month>
+  <net_earnings>0.0</net_earnings>
+  <previous_net_earnings>0.0</previous_net_earnings>
+  <total_interest_payment>0.0</total_interest_payment>
+  <total_interest_payment_in_calendar_month>0.0</total_interest_payment_in_calendar_month>
+  <total_debt_installment_payment>0.0</total_debt_installment_payment>
+  <total_debt_installment_payment_in_calendar_month>0.0</total_debt_installment_payment_in_calendar_month>
+  <total_dividend_payment>0.0</total_dividend_payment>
+  <total_dividend_payment_in_calendar_month>0.0</total_dividend_payment_in_calendar_month>
+  <current_share_price>0.404374622356</current_share_price>
+  <previous_dividend_per_share>0.0</previous_dividend_per_share>
+  <current_dividend_per_share>0.0</current_dividend_per_share>
+  <previous_earnings_per_share>0.0</previous_earnings_per_share>
+  <current_earnings_per_share>0.0</current_earnings_per_share>
+  <previous_dividend_per_earnings>0.0</previous_dividend_per_earnings>
+  <current_dividend_per_earnings>0.0</current_dividend_per_earnings>
+  <debt_earnings_ratio>0.0</debt_earnings_ratio>
+  <debt_equity_ratio>0.0</debt_equity_ratio>
+  <price_earnings_ratio>0.0</price_earnings_ratio>
+  <retained_earnings_ratio>0.0</retained_earnings_ratio>
+  <earnings_per_share_ratio_growth>0.0</earnings_per_share_ratio_growth>
+  <critical_price_earnings_ratio>0.0</critical_price_earnings_ratio>
+  <critical_earnings_per_share_ratio>0.0</critical_earnings_per_share_ratio>
+  <loans>{{REPLACE_ID_9,8.08749244713,0.00486755056534,0.336978851964,0.291373723588,6.99296936612,0.0,25}}</loans>
+  <total_debt>8.08749244713</total_debt>
+  <total_debt_balance_sheet>0.0</total_debt_balance_sheet>
+  <total_value_local_inventory>0.0</total_value_local_inventory>
+  <total_value_local_inventory_balance_sheet>0.0</total_value_local_inventory_balance_sheet>
+  <total_units_capital_stock>7.35226586103</total_units_capital_stock>
+  <total_value_capital_stock>11.0283987915</total_value_capital_stock>
+  <total_value_capital_stock_balance_sheet>0.0</total_value_capital_stock_balance_sheet>
+  <total_capital_depreciation_value>0.0</total_capital_depreciation_value>
+  <total_capital_depreciation_units>0.0</total_capital_depreciation_units>
+  <total_assets>12.1312386707</total_assets>
+  <equity>4.04374622356</equity>
+  <equity_balance_sheet>0.0</equity_balance_sheet>
+  <production_liquidity_needs>0.0</production_liquidity_needs>
+  <financial_liquidity_needs>0.0</financial_liquidity_needs>
+  <total_financial_needs>0.0</total_financial_needs>
+  <external_financial_needs>0.0</external_financial_needs>
+  <earnings_per_share>0.0</earnings_per_share>
+  <total_payments>0.0</total_payments>
+  <previous_shares_outstanding>10</previous_shares_outstanding>
+  <total_income>0.0</total_income>
+  <total_liabilities>0.0</total_liabilities>
+  <total_expenses>0.0</total_expenses>
+  <earnings_payout>0.0</earnings_payout>
+  <current_shares_outstanding>10</current_shares_outstanding>
+  <stock>{REPLACE_ID_1,10,0,{0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356,0.404374622356},{-0.00471680764823,0.0120452387124,0.00436690121773,-0.00233231536969,-0.00288254784387,-0.0312702856748,0.0148754478938,-0.017004313378,-0.00581906375471,0.0009165645249,-0.00877356127401,-0.0160653149594,0.0163101091231,0.00113618561735,0.00997994885094,-0.00723309890806,-0.00823329605931,-0.0195810441121,-0.0106892014314,-0.0286122454433,-0.00720505468417,0.03420483916,-0.00452917625509,0.0131529244676,-0.0081504963692,0.0183201283333,-0.00744816217041,0.00674279945665,-0.0131626495115,0.00878728267659,-0.020123024884,-0.0187576818181,-0.0327175935018,-0.00982328456551,-0.0109091998206,-0.0233900850666,0.019322301732,-0.0342570001001,0.000258325290947,0.0216674995618,0.0283420904684,-0.0141274076087,-0.0242941439319,-0.0255830915701,0.0123566385514,0.00191318772342,0.00334924289436,0.0156136155896,0.00875955069814,-0.0198821773652,-0.00695733981806,-0.0162098776293,-0.00155245304851,-0.0166229578889,-0.0156875731307,-0.00453361929701,-0.014430918781,-0.00667640921023,0.0324659382715,-0.00938139921479,0.000899794400985,0.0169066296263,0.0102531664047,0.0130224990095,0.0226675107144,0.00306342105789,0.00732350257171,0.0031539911544,-0.00989127236147,0.00624144698128,0.0125939049406,-0.0271261864553,0.00707041065159,-0.00260350910695,-0.0118630985071,0.0129709736968,0.00761894408604,0.0036667006407,0.03089547394,0.00573917463017,-0.0345507812662,0.0145748741056,-0.0122008035035,-0.00106902079727,0.0226066288406,-0.0116971600506,0.00363758771937,0.00292341240438,0.031608478657,0.0231798955541,0.0148127697416,0.00301565071614,-0.0085388806945,-0.01575824117,-0.0138672074455,0.0102397435798,0.0374397878575,0.0100878519498,0.00355055063651,-0.0161767614228}}</stock>
+  <employees>{}</employees>
+  <wage_offer>1.0</wage_offer>
+  <technology>1.5</technology>
+  <no_employees>0</no_employees>
+  <no_employees_skill_1>0</no_employees_skill_1>
+  <no_employees_skill_2>0</no_employees_skill_2>
+  <no_employees_skill_3>0</no_employees_skill_3>
+  <no_employees_skill_4>0</no_employees_skill_4>
+  <no_employees_skill_5>0</no_employees_skill_5>
+  <vacancies>0</vacancies>
+  <average_g_skill>0.0</average_g_skill>
+  <average_s_skill_of_1>1.5</average_s_skill_of_1>
+  <average_s_skill_of_2>1.5</average_s_skill_of_2>
+  <average_s_skill_of_3>1.5</average_s_skill_of_3>
+  <average_s_skill_of_4>1.5</average_s_skill_of_4>
+  <average_s_skill_of_5>1.5</average_s_skill_of_5>
+  <wage_offer_for_skill_1>1.0</wage_offer_for_skill_1>
+  <wage_offer_for_skill_2>1.0</wage_offer_for_skill_2>
+  <wage_offer_for_skill_3>1.0</wage_offer_for_skill_3>
+  <wage_offer_for_skill_4>1.0</wage_offer_for_skill_4>
+  <wage_offer_for_skill_5>1.0</wage_offer_for_skill_5>
+  <employees_needed>0</employees_needed>
+  <firm_balance_sheet_calendar>{{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0}}</firm_balance_sheet_calendar>
+  <firm_stocks_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0}</firm_stocks_calendar>
+  <firm_outflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</firm_outflows_calendar>
+  <firm_inflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0}</firm_inflows_calendar>
+  <age>0</age>
+  <transfer_payment>0.0</transfer_payment>
+  <subsidy_pct>0.0</subsidy_pct>
+  <active>1</active>
+  <bankruptcy_idle_counter>0</bankruptcy_idle_counter>
+  <bankruptcy_state>0</bankruptcy_state>
+  <bankruptcy_insolvency_state>0</bankruptcy_insolvency_state>
+  <bankruptcy_illiquidity_state>0</bankruptcy_illiquidity_state>
+  <financial_crisis_state>0</financial_crisis_state>
+  <subsidy_payment>0.0</subsidy_payment>
+  <id>REPLACE_ID_1</id>
+  <region_id>1</region_id>
+  <gov_id>REPLACE_ID_5</gov_id>
+  <day_of_month_to_act>5</day_of_month_to_act>
+  <last_day_of_month_to_act>4</last_day_of_month_to_act>
+  <payment_account>1.10283987915</payment_account>
+  <payment_account_balance_sheet>0.0</payment_account_balance_sheet>
+  <bank_id>REPLACE_ID_10</bank_id>
+  <partition_id>0</partition_id>
+</xagent>
+<xagent>
+<name>Central_Bank</name>
+  <equity>0.0</equity>
+  <dividend_payment>0.0</dividend_payment>
+  <fiat_money>29.5139413052</fiat_money>
+  <fiat_money_banks>0.0</fiat_money_banks>
+  <ecb_deposits>0.0</ecb_deposits>
+  <accounts_banks>{{REPLACE_ID_9,0.0},{REPLACE_ID_10,0.0}}</accounts_banks>
+  <accounts_govs>{{REPLACE_ID_5,0.1}}</accounts_govs>
+  <cash>0.0</cash>
+  <new_bonds_last_price>{0.0}</new_bonds_last_price>
+  <gov_bonds_holding>{0}</gov_bonds_holding>
+  <new_bonds_quantity>{0}</new_bonds_quantity>
+  <new_bonds_gov_id>{0}</new_bonds_gov_id>
+  <ecb_bond_holdings>{{0.0,0.0,0,REPLACE_ID_5}}</ecb_bond_holdings>
+  <QE_policy>0</QE_policy>
+  <ecb_balance_sheet_calendar>{{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0,0.0}}</ecb_balance_sheet_calendar>
+  <ecb_stocks_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0}</ecb_stocks_calendar>
+  <ecb_outflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0}</ecb_outflows_calendar>
+  <ecb_inflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0}</ecb_inflows_calendar>
+  <bond_holdings_value>0.0</bond_holdings_value>
+  <nr_gov_bonds>0</nr_gov_bonds>
+  <fiat_money_govs>29.5139413052</fiat_money_govs>
+  <fiat_money_bond_govs>0.0</fiat_money_bond_govs>
+  <bank_interest>0.0</bank_interest>
+  <gov_interest>0.0</gov_interest>
+  <gov_bond_purchase>0.0</gov_bond_purchase>
+  <total_income>0.0</total_income>
+  <total_expenses>0.0</total_expenses>
+  <total_assets>0.0</total_assets>
+  <total_liabilities>0.0</total_liabilities>
+  <id>REPLACE_ID_2</id>
+  <region_id>1</region_id>
+  <partition_id>0</partition_id>
+</xagent>
+<xagent>
+<name>Clearinghouse</name>
+  <assets>{}</assets>
+  <clearingmechanism>{0.0,0,{},{},{}}</clearingmechanism>
+  <id>REPLACE_ID_3</id>
+  <region_id>1</region_id>
+  <partition_id>0</partition_id>
+</xagent>
+<xagent>
+<name>IGFirm</name>
+  <set_of_lenders>{}</set_of_lenders>
+  <number_of_banks_asked>0</number_of_banks_asked>
+  <ebit>0.0</ebit>
+  <earnings>0.0</earnings>
+  <tax_rate_corporate>0.0</tax_rate_corporate>
+  <tax_rate_vat>0.0</tax_rate_vat>
+  <tax_payment>0.0</tax_payment>
+  <tax_payment_in_calendar_month>0.0</tax_payment_in_calendar_month>
+  <net_earnings>0.0</net_earnings>
+  <previous_net_earnings>0.0</previous_net_earnings>
+  <total_interest_payment>0.0</total_interest_payment>
+  <total_interest_payment_in_calendar_month>0.0</total_interest_payment_in_calendar_month>
+  <total_debt_installment_payment>0.0</total_debt_installment_payment>
+  <total_debt_installment_payment_in_calendar_month>0.0</total_debt_installment_payment_in_calendar_month>
+  <total_dividend_payment>0.0</total_dividend_payment>
+  <total_dividend_payment_in_calendar_month>0.0</total_dividend_payment_in_calendar_month>
+  <current_share_price>22.0</current_share_price>
+  <previous_dividend_per_share>0.0</previous_dividend_per_share>
+  <current_dividend_per_share>0.0</current_dividend_per_share>
+  <previous_earnings_per_share>0.0</previous_earnings_per_share>
+  <current_earnings_per_share>0.0</current_earnings_per_share>
+  <previous_dividend_per_earnings>0.0</previous_dividend_per_earnings>
+  <current_dividend_per_earnings>0.0</current_dividend_per_earnings>
+  <debt_earnings_ratio>0.0</debt_earnings_ratio>
+  <debt_equity_ratio>0.0</debt_equity_ratio>
+  <price_earnings_ratio>0.0</price_earnings_ratio>
+  <retained_earnings_ratio>0.0</retained_earnings_ratio>
+  <earnings_per_share_ratio_growth>0.0</earnings_per_share_ratio_growth>
+  <critical_price_earnings_ratio>0.0</critical_price_earnings_ratio>
+  <critical_earnings_per_share_ratio>0.0</critical_earnings_per_share_ratio>
+  <loans>{}</loans>
+  <total_debt>0.0</total_debt>
+  <total_debt_balance_sheet>0.0</total_debt_balance_sheet>
+  <total_value_local_inventory>200.0</total_value_local_inventory>
+  <total_value_local_inventory_balance_sheet>0.0</total_value_local_inventory_balance_sheet>
+  <total_units_capital_stock>0.0</total_units_capital_stock>
+  <total_value_capital_stock>0.0</total_value_capital_stock>
+  <total_capital_depreciation_value>0.0</total_capital_depreciation_value>
+  <total_capital_depreciation_units>0.0</total_capital_depreciation_units>
+  <total_assets>220.0</total_assets>
+  <equity>220.0</equity>
+  <equity_balance_sheet>0.0</equity_balance_sheet>
+  <production_liquidity_needs>0.0</production_liquidity_needs>
+  <financial_liquidity_needs>0.0</financial_liquidity_needs>
+  <total_financial_needs>0.0</total_financial_needs>
+  <external_financial_needs>0.0</external_financial_needs>
+  <earnings_per_share>0.0</earnings_per_share>
+  <total_payments>0.0</total_payments>
+  <previous_shares_outstanding>10</previous_shares_outstanding>
+  <total_income>0.0</total_income>
+  <total_liabilities>0.0</total_liabilities>
+  <total_expenses>0.0</total_expenses>
+  <earnings_payout>0.0</earnings_payout>
+  <current_shares_outstanding>10</current_shares_outstanding>
+  <stock>{0,0,0,{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}}</stock>
+  <productivity>1.5</productivity>
+  <capital_good_price>2.0</capital_good_price>
+  <revenue_per_day>0.0</revenue_per_day>
+  <net_profit>0.0</net_profit>
+  <outstanding_shares>10</outstanding_shares>
+  <energy_price_markup>0.0</energy_price_markup>
+  <energy_costs_per_day>0.0</energy_costs_per_day>
+  <earnings_per_day>0.0</earnings_per_day>
+  <cum_energy_costs>0.0</cum_energy_costs>
+  <last_net_profits>{0.0,0.0,0.0,0.0,0.0}</last_net_profits>
+  <dividend_payment>0.0</dividend_payment>
+  <duration_until_next_innovation>0</duration_until_next_innovation>
+  <innovation_success>0</innovation_success>
+  <additional_productivity>0.0</additional_productivity>
+  <revenue_for_innovation>0.0</revenue_for_innovation>
+  <capital_good_demand_after_last_innovation>0.0</capital_good_demand_after_last_innovation>
+  <capital_good_demand>0.0</capital_good_demand>
+  <capital_good_demand_last_month>0.0</capital_good_demand_last_month>
+  <last_capital_good_demand>{30.0,30.0,30.0,30.0,30.0}</last_capital_good_demand>
+  <last_capital_good_sales>{30.0,30.0,30.0,30.0,30.0,30.0,30.0,30.0,30.0,30.0}</last_capital_good_sales>
+  <no_zero_demand>0</no_zero_demand>
+  <critical_stock>0.0</critical_stock>
+  <output>0.0</output>
+  <planned_output>0.0</planned_output>
+  <capital_good_store>100.0</capital_good_store>
+  <capital_good_store_after_production>0.0</capital_good_store_after_production>
+  <capital_good_store_before_production>0.0</capital_good_store_before_production>
+  <planned_production_quantity>0.0</planned_production_quantity>
+  <planned_production_costs>0.0</planned_production_costs>
+  <production_costs>0.0</production_costs>
+  <calc_production_costs>0.0</calc_production_costs>
+  <production_costs_last_month>0.0</production_costs_last_month>
+  <production_quantity>0.0</production_quantity>
+  <last_production_quantities>{30.0,30.0,30.0,30.0,30.0}</last_production_quantities>
+  <labour_costs>0.0</labour_costs>
+  <unit_costs>0.0</unit_costs>
+  <sales>0.0</sales>
+  <sales_last_month>0.0</sales_last_month>
+  <new_productivity>0.0</new_productivity>
+  <new_capital_good_price>0.0</new_capital_good_price>
+  <cum_revenue>0.0</cum_revenue>
+  <cum_revenue_last_month>0.0</cum_revenue_last_month>
+  <cum_net_profits>0.0</cum_net_profits>
+  <financial_resources_for_production>0.0</financial_resources_for_production>
+  <innovation_sheme_low_progress>{1420,1480,1560,1600,1820,2040,2140,2520,2900,2940,3060,3200,3620,3680,3820,3980,4140,4640,4800,4980}</innovation_sheme_low_progress>
+  <innovation_sheme_medium_progress>{1300,1520,1540,1780,1860,2100,2340,2660,2740,2780,2920,2960,3080,3240,3380,3400,3520,3560,3680,3800,3980,4140,4160,4460,4480,4640,4680,4720,4760,4940}</innovation_sheme_medium_progress>
+  <innovation_sheme_high_progress>{1080,1120,1160,1380,1480,1580,1640,1700,1720,1760,1800,1860,1920,2060,2120,2160,2280,2440,2500,2580,2680,2700,2780,2820,3080,3100,3400,3440,3520,3600,3760,3980,4020,4120,4360,4460,4520,4580,4820,4880}</innovation_sheme_high_progress>
+  <percent_revenue_for_innovation>0.1</percent_revenue_for_innovation>
+  <employees>{}</employees>
+  <research_employees>{}</research_employees>
+  <technology>0.0</technology>
+  <wage_offer>1.0</wage_offer>
+  <wage_offer_for_rd>1.0</wage_offer_for_rd>
+  <base_wage_offer_for_rd>1.0</base_wage_offer_for_rd>
+  <no_employees>0</no_employees>
+  <no_research_employees>0</no_research_employees>
+  <no_employees_skill_1>0</no_employees_skill_1>
+  <no_employees_skill_2>0</no_employees_skill_2>
+  <no_employees_skill_3>0</no_employees_skill_3>
+  <no_employees_skill_4>0</no_employees_skill_4>
+  <no_employees_skill_5>0</no_employees_skill_5>
+  <vacancies>0</vacancies>
+  <production_vacancies_posted>0</production_vacancies_posted>
+  <research_vacancies>0</research_vacancies>
+  <research_vacancies_posted>0</research_vacancies_posted>
+  <average_g_skill>0.0</average_g_skill>
+  <average_s_skill_of_1>1.0</average_s_skill_of_1>
+  <average_s_skill_of_2>1.0</average_s_skill_of_2>
+  <average_s_skill_of_3>1.0</average_s_skill_of_3>
+  <average_s_skill_of_4>1.0</average_s_skill_of_4>
+  <average_s_skill_of_5>1.0</average_s_skill_of_5>
+  <wage_offer_for_skill_1>1.0</wage_offer_for_skill_1>
+  <wage_offer_for_skill_2>1.0</wage_offer_for_skill_2>
+  <wage_offer_for_skill_3>1.0</wage_offer_for_skill_3>
+  <wage_offer_for_skill_4>1.0</wage_offer_for_skill_4>
+  <wage_offer_for_skill_5>1.0</wage_offer_for_skill_5>
+  <employees_needed>0</employees_needed>
+  <research_employees_needed>10</research_employees_needed>
+  <mean_wage>1.0</mean_wage>
+  <mean_research_wage>1.0</mean_research_wage>
+  <mean_specific_skills>1.0</mean_specific_skills>
+  <mean_research_specific_skills>1.0</mean_research_specific_skills>
+  <igfirm_balance_sheet_calendar>{{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0}}</igfirm_balance_sheet_calendar>
+  <igfirm_stocks_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0}</igfirm_stocks_calendar>
+  <igfirm_outflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</igfirm_outflows_calendar>
+  <igfirm_inflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0}</igfirm_inflows_calendar>
+  <age>0</age>
+  <transfer_payment>0.0</transfer_payment>
+  <subsidy_pct>0.0</subsidy_pct>
+  <active>1</active>
+  <bankruptcy_idle_counter>0</bankruptcy_idle_counter>
+  <bankruptcy_state>0</bankruptcy_state>
+  <bankruptcy_insolvency_state>0</bankruptcy_insolvency_state>
+  <bankruptcy_illiquidity_state>0</bankruptcy_illiquidity_state>
+  <financial_crisis_state>0</financial_crisis_state>
+  <subsidy_payment>0.0</subsidy_payment>
+  <id>REPLACE_ID_4</id>
+  <region_id>1</region_id>
+  <gov_id>REPLACE_ID_5</gov_id>
+  <bank_id>REPLACE_ID_10</bank_id>
+  <day_of_month_to_act>0</day_of_month_to_act>
+  <last_day_of_month_to_act>19</last_day_of_month_to_act>
+  <payment_account>20.0</payment_account>
+  <payment_account_balance_sheet>0.0</payment_account_balance_sheet>
+  <partition_id>0</partition_id>
+</xagent>
+<xagent>
+<name>Government</name>
+  <bond>{REPLACE_ID_5,20,0,0.1,0.055,100000,1,0.0,{0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1},0,{0.0133832016986,-0.0174867828486,0.0203868664328,-0.0263118102617,-0.00369224269789,0.0166312233649,0.0158362022435,-0.0160006198967,0.0134131218561,-0.00331399281386,0.00122159532086,0.00847807550753,-0.0264179092968,0.029859940798,-0.00341148539091,-0.0270747814595,0.027589610874,0.0110936122825,0.016784656612,-0.0281937307651,0.00315392993397,0.00236475334392,0.0101530928578,-0.0108088698116,0.0140692240223,0.00324708776589,-0.00220145941741,0.019680488307,0.0151868307092,-0.0208708821847,0.0256873848543,0.00609211038706,0.0180219036203,0.000412384459998,0.0172339873098,0.000330704263392,-0.0105318859401,-0.0103409361648,-0.00790092794291,-0.00491016586747,0.00179171076531,0.0100029575179,-0.00200455295214,-0.00996410122831,-0.0303672665786,0.0141241691947,0.0234773684912,-0.0118741693724,-0.00528244316798,0.00368977169763,-0.0313965540727,-0.0131035591872,-0.00286673460788,0.0116392248879,-0.0152339824865,0.0152734886632,-0.016695214225,0.0060803644079,0.0243527028478,0.0196867294312,0.030470717011,-0.018159410365,-0.0111992948328,0.0233211289353,-3.96865652488e-05,-0.0180968037203,-0.0128535525351,0.00522363524972,0.00403372369192,-0.00998507918992,-0.00237415602591,0.00878027220298,0.0121237640133,-0.00681010427485,0.00815068554618,0.023272536107,-0.0204922348995,0.0192076274726,0.000750032388882,-0.0027095591237,0.0115837880518,-0.00540776170197,-0.000485535220886,-0.0115516563903,-0.00592129388303,-0.0056557515436,0.00811890009311,0.0273133810728,0.000393627799026,0.0251480678368,0.0225968824294,-0.000518340418416,0.0101778781888,-0.00804385697805,-0.0149052367536,-0.00412799043247,-0.00407805207547,-0.0177087187425,0.0103921976873,0.0219663603904}}</bond>
+  <pending_order>{0,0,0.0,0}</pending_order>
+  <unemployment_benefit_pct>0.7</unemployment_benefit_pct>
+  <gdp_fraction_consumption>0.0</gdp_fraction_consumption>
+  <gdp_fraction_investment>0.0</gdp_fraction_investment>
+  <tax_rate_corporate>0.05</tax_rate_corporate>
+  <tax_rate_hh_labour>0.05</tax_rate_hh_labour>
+  <tax_rate_hh_capital>0.0</tax_rate_hh_capital>
+  <tax_rate_vat>0.0</tax_rate_vat>
+  <monthly_tax_revenues>0.0</monthly_tax_revenues>
+  <yearly_tax_revenues>0.0</yearly_tax_revenues>
+  <monthly_benefit_payment>0.0</monthly_benefit_payment>
+  <yearly_benefit_payment>0.0</yearly_benefit_payment>
+  <hh_transfer_payment>0.0</hh_transfer_payment>
+  <firm_transfer_payment>0.0</firm_transfer_payment>
+  <monthly_transfer_payment>0.0</monthly_transfer_payment>
+  <yearly_transfer_payment>0.0</yearly_transfer_payment>
+  <hh_subsidy_pct>0.0</hh_subsidy_pct>
+  <firm_subsidy_pct>0.0</firm_subsidy_pct>
+  <subsidy_flag>0</subsidy_flag>
+  <gov_interest_rate>0.0</gov_interest_rate>
+  <monthly_bond_interest_payment>0.0</monthly_bond_interest_payment>
+  <monthly_subsidy_payment>0.0</monthly_subsidy_payment>
+  <monthly_consumption_expenditure>0.0</monthly_consumption_expenditure>
+  <monthly_investment_expenditure>0.0</monthly_investment_expenditure>
+  <monthly_budget_balance>0.0</monthly_budget_balance>
+  <monthly_gdp>0.0</monthly_gdp>
+  <monthly_budget_balance_gdp_fraction>0.0</monthly_budget_balance_gdp_fraction>
+  <monthly_consumption_budget>0.0</monthly_consumption_budget>
+  <monthly_investment_budget>0.0</monthly_investment_budget>
+  <monthly_income>0.0</monthly_income>
+  <monthly_expenditure>0.0</monthly_expenditure>
+  <yearly_subsidy_payment>0.0</yearly_subsidy_payment>
+  <yearly_bond_interest_payment>0.0</yearly_bond_interest_payment>
+  <yearly_investment_expenditure>0.0</yearly_investment_expenditure>
+  <yearly_consumption_expenditure>0.0</yearly_consumption_expenditure>
+  <yearly_income>0.0</yearly_income>
+  <yearly_expenditure>0.0</yearly_expenditure>
+  <total_debt>2.0</total_debt>
+  <yearly_budget_balance>0.0</yearly_budget_balance>
+  <total_money_financing>0.0</total_money_financing>
+  <total_bond_financing>0.0</total_bond_financing>
+  <country_wide_mean_wage>0.0</country_wide_mean_wage>
+  <num_unemployed>0</num_unemployed>
+  <yearly_gdp>1.0</yearly_gdp>
+  <previous_year_gdp>0.0</previous_year_gdp>
+  <gdp_growth>1.0</gdp_growth>
+  <gdp_forecast>0.0</gdp_forecast>
+  <yearly_income_forecast>0.0</yearly_income_forecast>
+  <yearly_expenditure_budget>0.0</yearly_expenditure_budget>
+  <budget_balance_forecast>0.0</budget_balance_forecast>
+  <yearly_consumption_budget>0.0</yearly_consumption_budget>
+  <yearly_investment_budget>0.0</yearly_investment_budget>
+  <yearly_budget_balance_gdp_fraction>0.0</yearly_budget_balance_gdp_fraction>
+  <total_assets>0.0</total_assets>
+  <total_liabilities>0.0</total_liabilities>
+  <cumulated_deficit>0.0</cumulated_deficit>
+  <inflation_rate>0.0</inflation_rate>
+  <unemployment_rate>0.0</unemployment_rate>
+  <gov_balance_sheet_calendar>{{0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0,0.0}}</gov_balance_sheet_calendar>
+  <gov_stocks_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0}</gov_stocks_calendar>
+  <gov_outflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</gov_outflows_calendar>
+  <gov_inflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0}</gov_inflows_calendar>
+  <id>REPLACE_ID_5</id>
+  <list_of_regions>{1}</list_of_regions>
+  <payment_account>0.1</payment_account>
+  <day_of_month_to_act>1</day_of_month_to_act>
+  <region_id>1</region_id>
+  <partition_id>0</partition_id>
+</xagent>
+<xagent>
+<name>Household</name>
+  <consumption_budget>0.0</consumption_budget>
+  <consumption_budget_in_month>0.0</consumption_budget_in_month>
+  <week_of_month>4</week_of_month>
+  <weekly_budget>0.0</weekly_budget>
+  <rationed>0</rationed>
+  <mall_completely_sold_out>0</mall_completely_sold_out>
+  <order_quantity>{{0,0.0,0.0},{0,0.0,0.0}}</order_quantity>
+  <received_quantity>{{0,0.0},{0,0.0}}</received_quantity>
+  <day_of_week_to_act>2</day_of_week_to_act>
+  <day_of_month_receive_income>1</day_of_month_receive_income>
+  <current_productivity_employer>0.0</current_productivity_employer>
+  <current_mean_specific_skills_employer>0.0</current_mean_specific_skills_employer>
+  <tax_payment>0.0</tax_payment>
+  <cum_total_dividends>0.0</cum_total_dividends>
+  <tax_rate_hh_capital>0.0</tax_rate_hh_capital>
+  <tax_rate_hh_labour>0.0</tax_rate_hh_labour>
+  <price_index>0.0</price_index>
+  <price_index_base_period>0.0</price_index_base_period>
+  <commuting_costs_price_level_weight>0.0</commuting_costs_price_level_weight>
+  <expenditures>0.0</expenditures>
+  <received_dividend>0.0</received_dividend>
+  <received_dividend_in_calendar_month>0.0</received_dividend_in_calendar_month>
+  <flag_consumption_shifting>0</flag_consumption_shifting>
+  <excess_weekly_budget>0.0</excess_weekly_budget>
+  <wealth_income_ratio_actual>160.695830816</wealth_income_ratio_actual>
+  <wealth_income_ratio_target>160.695830816</wealth_income_ratio_target>
+  <risk_free_rate>0.0</risk_free_rate>
+  <wealth>241.043746224</wealth>
+  <beliefs>{}</beliefs>
+  <pendingOrders>{}</pendingOrders>
+  <assetsowned>{{REPLACE_ID_1,10,0.404374622356},{REPLACE_ID_5,20,0.1},{REPLACE_ID_4,10,22.0},{REPLACE_ID_9,10,0.0},{REPLACE_ID_10,10,0.0}}</assetsowned>
+  <assetWeights>{}</assetWeights>
+  <assetUtilities>{}</assetUtilities>
+  <cash_on_hand>0.0</cash_on_hand>
+  <forwardWindow>40</forwardWindow>
+  <backwardWindow>49</backwardWindow>
+  <bins>0</bins>
+  <randomWeight>1.0</randomWeight>
+  <fundamentalWeight>0.0</fundamentalWeight>
+  <chartistWeight>0.0</chartistWeight>
+  <holdingPeriodToForwardW>1</holdingPeriodToForwardW>
+  <lossaversion>2.0</lossaversion>
+  <strategy>0.0</strategy>
+  <wage>0.0</wage>
+  <wage_reservation>1.5</wage_reservation>
+  <general_skill>4</general_skill>
+  <on_the_job_search>0</on_the_job_search>
+  <number_applications>5</number_applications>
+  <last_labour_income>1.5</last_labour_income>
+  <specific_skill>1.5</specific_skill>
+  <employee_firm_id>-1</employee_firm_id>
+  <employer_region_id>0</employer_region_id>
+  <employer_igfirm>0</employer_igfirm>
+  <day_of_month_receive_benefit>1</day_of_month_receive_benefit>
+  <unemployment_payment>0.0</unemployment_payment>
+  <region_wide_mean_wage>0.0</region_wide_mean_wage>
+  <last_net_income>{1.5,1.5,1.5,1.5}</last_net_income>
+  <mean_net_income>1.5</mean_net_income>
+  <household_balance_sheet_calendar>{{0.0,0.0,0.0,0.0,0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}}</household_balance_sheet_calendar>
+  <household_stocks_calendar>{0.0,0.0,0.0,0.0,0,0.0,0.0}</household_stocks_calendar>
+  <household_outflows_calendar>{0.0,0.0,0.0,0.0,0.0}</household_outflows_calendar>
+  <household_inflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</household_inflows_calendar>
+  <unemployment_benefit_pct>0.0</unemployment_benefit_pct>
+  <transfer_payment>0.0</transfer_payment>
+  <subsidy_pct>0.0</subsidy_pct>
+  <total_income>0.0</total_income>
+  <total_expenses>0.0</total_expenses>
+  <total_assets>0.0</total_assets>
+  <total_liabilities>0.0</total_liabilities>
+  <gov_interest>0.0</gov_interest>
+  <stock_sales>0.0</stock_sales>
+  <stock_purchases>0.0</stock_purchases>
+  <gov_bond_purchases>0.0</gov_bond_purchases>
+  <monthly_consumption_expenditure>0.0</monthly_consumption_expenditure>
+  <monthly_bond_interest_income>0.0</monthly_bond_interest_income>
+  <subsidy_payment>0.0</subsidy_payment>
+  <region_mean_wage>0.0</region_mean_wage>
+  <id>REPLACE_ID_6</id>
+  <region_id>1</region_id>
+  <neighboring_region_ids>{}</neighboring_region_ids>
+  <gov_id>REPLACE_ID_5</gov_id>
+  <day_of_month_to_act>16</day_of_month_to_act>
+  <payment_account>15.0</payment_account>
+  <bank_id>REPLACE_ID_9</bank_id>
+  <partition_id>0</partition_id>
+</xagent>
+<xagent>
+<name>Mall</name>
+  <current_stock>{{REPLACE_ID_1,1,0.0,1.0,0.0,0.0}}</current_stock>
+  <firm_revenues>{{REPLACE_ID_1,0.0}}</firm_revenues>
+  <total_supply>0.0</total_supply>
+  <export_volume_matrix>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</export_volume_matrix>
+  <export_value_matrix>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</export_value_matrix>
+  <export_previous_value_matrix>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</export_previous_value_matrix>
+  <id>REPLACE_ID_7</id>
+  <region_id>1</region_id>
+  <gov_id>REPLACE_ID_5</gov_id>
+  <partition_id>0</partition_id>
+</xagent>
+<xagent>
+<name>Eurostat</name>
+  <switch_datastorage>1</switch_datastorage>
+  <num_households>0</num_households>
+  <no_households_skill_1>0</no_households_skill_1>
+  <no_households_skill_2>0</no_households_skill_2>
+  <no_households_skill_3>0</no_households_skill_3>
+  <no_households_skill_4>0</no_households_skill_4>
+  <no_households_skill_5>0</no_households_skill_5>
+  <employed>0</employed>
+  <employed_skill_1>0</employed_skill_1>
+  <employed_skill_2>0</employed_skill_2>
+  <employed_skill_3>0</employed_skill_3>
+  <employed_skill_4>0</employed_skill_4>
+  <employed_skill_5>0</employed_skill_5>
+  <unemployed>0</unemployed>
+  <unemployment_rate>0.0</unemployment_rate>
+  <unemployment_rate_skill_1>0.0</unemployment_rate_skill_1>
+  <unemployment_rate_skill_2>0.0</unemployment_rate_skill_2>
+  <unemployment_rate_skill_3>0.0</unemployment_rate_skill_3>
+  <unemployment_rate_skill_4>0.0</unemployment_rate_skill_4>
+  <unemployment_rate_skill_5>0.0</unemployment_rate_skill_5>
+  <average_wage>0.0</average_wage>
+  <average_wage_skill_1>0.0</average_wage_skill_1>
+  <average_wage_skill_2>0.0</average_wage_skill_2>
+  <average_wage_skill_3>0.0</average_wage_skill_3>
+  <average_wage_skill_4>0.0</average_wage_skill_4>
+  <average_wage_skill_5>0.0</average_wage_skill_5>
+  <average_s_skill>0.0</average_s_skill>
+  <average_s_skill_1>0.0</average_s_skill_1>
+  <average_s_skill_2>0.0</average_s_skill_2>
+  <average_s_skill_3>0.0</average_s_skill_3>
+  <average_s_skill_4>0.0</average_s_skill_4>
+  <average_s_skill_5>0.0</average_s_skill_5>
+  <no_firms>0</no_firms>
+  <no_active_firms>0</no_active_firms>
+  <no_vacancies>0</no_vacancies>
+  <no_employees>0</no_employees>
+  <no_employees_skill_1>0</no_employees_skill_1>
+  <no_employees_skill_2>0</no_employees_skill_2>
+  <no_employees_skill_3>0</no_employees_skill_3>
+  <no_employees_skill_4>0</no_employees_skill_4>
+  <no_employees_skill_5>0</no_employees_skill_5>
+  <firm_average_wage>0.0</firm_average_wage>
+  <firm_average_wage_skill_1>0.0</firm_average_wage_skill_1>
+  <firm_average_wage_skill_2>0.0</firm_average_wage_skill_2>
+  <firm_average_wage_skill_3>0.0</firm_average_wage_skill_3>
+  <firm_average_wage_skill_4>0.0</firm_average_wage_skill_4>
+  <firm_average_wage_skill_5>0.0</firm_average_wage_skill_5>
+  <firm_average_s_skill>0.0</firm_average_s_skill>
+  <firm_average_s_skill_1>0.0</firm_average_s_skill_1>
+  <firm_average_s_skill_2>0.0</firm_average_s_skill_2>
+  <firm_average_s_skill_3>0.0</firm_average_s_skill_3>
+  <firm_average_s_skill_4>0.0</firm_average_s_skill_4>
+  <firm_average_s_skill_5>0.0</firm_average_s_skill_5>
+  <region_firm_data>{{1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0,0,0.0,0.0}}</region_firm_data>
+  <region_household_data>{{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.5,1.5,1.5,1.5,1.5,1.5}}</region_household_data>
+  <total_earnings>0.0</total_earnings>
+  <total_debt>0.0</total_debt>
+  <total_assets>0.0</total_assets>
+  <total_equity>0.0</total_equity>
+  <average_debt_earnings_ratio>0.0</average_debt_earnings_ratio>
+  <average_debt_equity_ratio>0.0</average_debt_equity_ratio>
+  <labour_share_ratio>0.0</labour_share_ratio>
+  <cpi>1.0</cpi>
+  <hpi>1.0</hpi>
+  <gdp>0.0</gdp>
+  <monthly_investment_value>0.0</monthly_investment_value>
+  <monthly_sold_quantity>0.0</monthly_sold_quantity>
+  <monthly_output>0.0</monthly_output>
+  <monthly_revenue>0.0</monthly_revenue>
+  <monthly_planned_output>0.0</monthly_planned_output>
+  <price_index>0.0</price_index>
+  <history_monthly>{{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}}}</history_monthly>
+  <history_quarterly>{{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}},{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}}}</history_quarterly>
+  <monthly_growth_rates>{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}}</monthly_growth_rates>
+  <quarterly_growth_rates>{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}}</quarterly_growth_rates>
+  <annual_growth_rates_monthly>{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}}</annual_growth_rates_monthly>
+  <annual_growth_rates_quarterly>{1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,{{1.0,1.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0}}}</annual_growth_rates_quarterly>
+  <no_firm_births>0</no_firm_births>
+  <no_firm_deaths>0</no_firm_deaths>
+  <firm_age_distribution>{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}</firm_age_distribution>
+  <firm_age_distribution_multiperiod>{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}</firm_age_distribution_multiperiod>
+  <firm_age_distribution_1_period_lag>{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}</firm_age_distribution_1_period_lag>
+  <firm_age_distribution_2_period_lag>{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}</firm_age_distribution_2_period_lag>
+  <firm_birth_rate>0.0</firm_birth_rate>
+  <firm_death_rate>0.0</firm_death_rate>
+  <survival_rate>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</survival_rate>
+  <survival_rate_multiperiod_1>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</survival_rate_multiperiod_1>
+  <survival_rate_multiperiod_2>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</survival_rate_multiperiod_2>
+  <survival_rate_multiperiod>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</survival_rate_multiperiod>
+  <max_firm_creation>0</max_firm_creation>
+  <recession_started>0</recession_started>
+  <recession_duration>0</recession_duration>
+  <export_volume_matrix>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</export_volume_matrix>
+  <export_value_matrix>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</export_value_matrix>
+  <export_previous_value_matrix>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</export_previous_value_matrix>
+  <region_export_volume>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</region_export_volume>
+  <region_import_volume>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</region_import_volume>
+  <region_export_value>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</region_export_value>
+  <region_import_value>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</region_import_value>
+  <region_import_previous_value>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}</region_import_previous_value>
+  <firm_average_productivity_progress>0.0</firm_average_productivity_progress>
+  <firm_average_productivity>0.0</firm_average_productivity>
+  <investment_gdp_ratio>0.0</investment_gdp_ratio>
+  <total_capital_stock_units>0.0</total_capital_stock_units>
+  <total_value_mall_inventories>0.0</total_value_mall_inventories>
+  <total_dividends>0.0</total_dividends>
+  <base_wage_offer>0.0</base_wage_offer>
+  <id>REPLACE_ID_8</id>
+  <region_id>1</region_id>
+  <partition_id>0</partition_id>
+</xagent>
+<xagent>
+<name>Bank</name>
+  <cash>8.31110142609</cash>
+  <total_credit>8.08749244713</total_credit>
+  <equity>1.39859387322</equity>
+  <ecb_debt>0.0</ecb_debt>
+  <value_at_risk>6.99296936612</value_at_risk>
+  <deposits_rate>0.045</deposits_rate>
+  <bank_gamma>{0.5,0.4}</bank_gamma>
+  <profits>{0.0,0.0}</profits>
+  <bank_lambda>0.2</bank_lambda>
+  <bank_dividend_rate>1.0</bank_dividend_rate>
+  <tax_rate_corporate>0.0</tax_rate_corporate>
+  <current_shares_outstanding>10</current_shares_outstanding>
+  <debt_period>1.0</debt_period>
+  <loan_request_message_found>0</loan_request_message_found>
+  <day_of_month_to_act>0</day_of_month_to_act>
+  <deposits>15.0</deposits>
+  <firm_loan_installments>0.0</firm_loan_installments>
+  <firm_loan_installments_in_calendar_month>0.0</firm_loan_installments_in_calendar_month>
+  <firm_interest_payments>0.0</firm_interest_payments>
+  <firm_interest_payments_in_calendar_month>0.0</firm_interest_payments_in_calendar_month>
+  <firm_loan_issues>0.0</firm_loan_issues>
+  <ecb_interest_payment>0.0</ecb_interest_payment>
+  <total_dividends>0.0</total_dividends>
+  <total_dividend_payment_in_calendar_month>0.0</total_dividend_payment_in_calendar_month>
+  <taxes>0.0</taxes>
+  <dividend_per_share>0.0</dividend_per_share>
+  <current_share_price>0.0</current_share_price>
+  <leverage_ratio>0.0</leverage_ratio>
+  <mean_interest_rate>0.0</mean_interest_rate>
+  <bank_balance_sheet_calendar>{{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0,0.0}}</bank_balance_sheet_calendar>
+  <bank_stocks_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0}</bank_stocks_calendar>
+  <bank_outflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0}</bank_outflows_calendar>
+  <bank_inflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0}</bank_inflows_calendar>
+  <total_income>0.0</total_income>
+  <total_expenses>0.0</total_expenses>
+  <total_assets>0.0</total_assets>
+  <total_liabilities>0.0</total_liabilities>
+  <id>REPLACE_ID_9</id>
+  <region_id>1</region_id>
+  <gov_id>REPLACE_ID_5</gov_id>
+  <partition_id>0</partition_id>
+</xagent>
+<xagent>
+<name>Bank</name>
+  <cash>21.1028398792</cash>
+  <total_credit>0.0</total_credit>
+  <equity>0.0</equity>
+  <ecb_debt>0.0</ecb_debt>
+  <value_at_risk>0.0</value_at_risk>
+  <deposits_rate>0.045</deposits_rate>
+  <bank_gamma>{0.5,0.4}</bank_gamma>
+  <profits>{0.0,0.0}</profits>
+  <bank_lambda>0.2</bank_lambda>
+  <bank_dividend_rate>1.0</bank_dividend_rate>
+  <tax_rate_corporate>0.0</tax_rate_corporate>
+  <current_shares_outstanding>10</current_shares_outstanding>
+  <debt_period>1.0</debt_period>
+  <loan_request_message_found>0</loan_request_message_found>
+  <day_of_month_to_act>0</day_of_month_to_act>
+  <deposits>21.1028398792</deposits>
+  <firm_loan_installments>0.0</firm_loan_installments>
+  <firm_loan_installments_in_calendar_month>0.0</firm_loan_installments_in_calendar_month>
+  <firm_interest_payments>0.0</firm_interest_payments>
+  <firm_interest_payments_in_calendar_month>0.0</firm_interest_payments_in_calendar_month>
+  <firm_loan_issues>0.0</firm_loan_issues>
+  <ecb_interest_payment>0.0</ecb_interest_payment>
+  <total_dividends>0.0</total_dividends>
+  <total_dividend_payment_in_calendar_month>0.0</total_dividend_payment_in_calendar_month>
+  <taxes>0.0</taxes>
+  <dividend_per_share>0.0</dividend_per_share>
+  <current_share_price>0.0</current_share_price>
+  <leverage_ratio>0.0</leverage_ratio>
+  <mean_interest_rate>0.0</mean_interest_rate>
+  <bank_balance_sheet_calendar>{{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0,0.0},{0.0,0.0,0.0,0.0,0.0,0.0,0.0}}</bank_balance_sheet_calendar>
+  <bank_stocks_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0.0,0.0}</bank_stocks_calendar>
+  <bank_outflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0}</bank_outflows_calendar>
+  <bank_inflows_calendar>{0.0,0.0,0.0,0.0,0.0,0.0,0.0}</bank_inflows_calendar>
+  <total_income>0.0</total_income>
+  <total_expenses>0.0</total_expenses>
+  <total_assets>0.0</total_assets>
+  <total_liabilities>0.0</total_liabilities>
+  <id>REPLACE_ID_10</id>
+  <region_id>1</region_id>
+  <gov_id>REPLACE_ID_5</gov_id>
+  <partition_id>0</partition_id>
+</xagent>
+</states>

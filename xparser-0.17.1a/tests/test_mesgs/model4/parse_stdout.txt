@@ -1,0 +1,7 @@
+BASE=/media/sander/DataStorage1/GIT/GitLab/ETACE-GIT/svn-import
+Starting XParsing
+FLAME_XPARSER_DIR=/media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/utils/xparser-0.17.1
+MODEL_DIR=/media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/test_models/xparser/test_segfault/model4
+Now in: /media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/utils/xparser-0.17.1
+XParsing done.
+Script done.

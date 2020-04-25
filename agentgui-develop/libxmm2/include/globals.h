@@ -1,0 +1,7 @@
+#define ORGANIZATION "EURACE"
+#define ORGANIZATION_DOMAIN "eurace.org"
+#define SOFTWARE_NAME "libxmm2"
+#define VERSION_MAJOR "0"
+#define VERSION_MINOR "0"
+#define VERSION_BUILD "3"
+#define SVN_REVISION_ID "$Rev: 43 $"

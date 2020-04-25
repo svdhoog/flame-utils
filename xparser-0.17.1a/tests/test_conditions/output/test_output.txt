@@ -1,0 +1,80 @@
+Test 1/a: FALSE
+Test 1/b: TRUE
+Test 1/c: TRUE
+Test 1/d: TRUE
+------------------------
+Test 2/a: FALSE
+Test 2/b: FALSE
+Test 2/c: FALSE
+Test 2/d: TRUE
+------------------------
+Test 3/a: TRUE
+Test 3/b: TRUE
+Test 3/c: FALSE
+Test 3/d: TRUE
+------------------------
+Test 4/a: FALSE
+Test 4/b: TRUE
+Test 4/c: FALSE
+Test 4/d: FALSE
+------------------------
+Test 5/a: TRUE
+Test 5/b: FALSE
+Test 5/c: TRUE
+Test 5/d: TRUE
+------------------------
+Test 6/a: FALSE
+Test 6/b: FALSE
+Test 6/c: TRUE
+Test 6/d: FALSE
+------------------------
+Test 7/a: TRUE
+Test 7/b: TRUE
+Test 7/c: TRUE
+Test 7/d: FALSE
+------------------------
+Test 8/a: TRUE
+Test 8/b: FALSE
+Test 8/c: FALSE
+Test 8/d: FALSE
+------------------------
+Test 9/a: FALSE
+Test 9/b: TRUE
+Test 9/c: TRUE
+Test 9/d: TRUE
+------------------------
+Test 10/a: FALSE
+Test 10/b: FALSE
+Test 10/c: FALSE
+Test 10/d: TRUE
+------------------------
+Test 11/a: TRUE
+Test 11/b: FALSE
+Test 11/c: TRUE
+Test 11/d: TRUE
+------------------------
+Test 12/a: FALSE
+Test 12/b: FALSE
+Test 12/c: TRUE
+Test 12/d: FALSE
+------------------------
+Test 13/a: TRUE
+Test 13/b: TRUE
+Test 13/c: FALSE
+Test 13/d: TRUE
+------------------------
+Test 14/a: FALSE
+Test 14/b: TRUE
+Test 14/c: FALSE
+Test 14/d: FALSE
+------------------------
+Test 15/a: TRUE
+Test 15/b: TRUE
+Test 15/c: TRUE
+Test 15/d: FALSE
+------------------------
+Test 16/a: TRUE
+Test 16/b: FALSE
+Test 16/c: FALSE
+Test 16/d: FALSE
+------------------------

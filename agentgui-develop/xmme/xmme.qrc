@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/icons/xmme" >
+        <file>images/xmme.png</file>
+        <file>images/euracelogo.png</file>
+        <file>images/emblem-people.png</file>
+        <file>images/im.png</file>
+        <file>images/function.png</file>
+        <file>images/functionFile.png</file>
+        <file>images/stock_mail.png</file>
+        <file>images/stock_mail-druid-account.png</file>
+        <file>images/document-open-recent.png</file>
+        <file>images/insert-object.png</file>
+        <file>images/document-new.png</file>
+        <file>images/document-save.png</file>
+        <file>images/document-open.png</file>
+        <file>images/application-exit.png</file>
+        <file>images/help-about.png</file>
+    </qresource>
+</RCC>

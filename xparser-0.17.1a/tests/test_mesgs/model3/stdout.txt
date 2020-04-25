@@ -1,0 +1,22 @@
+=========== Start of Test script ==================
+MODEL_DIR=/media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/utils/xparser-0.17.1/test_segfault/model3
+FLAME_XPARSER_DIR=/media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/utils/xparser-0.17.1
+Now in: /media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/utils/xparser-0.17.1
+=========== START of XParser output ==================
+xparser (Version 0.17.1)
+
+***Info: Evnironment variable FLAME_XPARSER_DIR set - looking in /media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/utils/xparser-0.17.1 for Templates
+
+Code type       : Serial (DEBUG)
+Input XMML file : /media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/utils/xparser-0.17.1/test_segfault/model3/model.xml
+Model root dir  : /media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/utils/xparser-0.17.1/test_segfault/model3/
+Template dir    : /media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/utils/xparser-0.17.1/
+
+Reading XMML file (/media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/utils/xparser-0.17.1/test_segfault/model3/model.xml)
+- Model name     : Test Model - Xparser 0.17.1 segfaults
+- xagent   : Agent_a
+- xagent   : Agent_b
+End of XMML file
+
+=========== END of XParser output ==================
+Test script done.

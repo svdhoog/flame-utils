@@ -1,0 +1,1 @@
+ERROR: input message type 'info_4' in function 'function_2' in agent 'Agent_b' in file '/media/sander/DataStorage1/GIT/GitLab/ABM@ECB/ABM_at_ECB/code/utils/xparser-0.17.1/test_segfault/model3/model.xml' doesn't exist

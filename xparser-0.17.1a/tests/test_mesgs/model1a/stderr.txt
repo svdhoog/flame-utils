@@ -1,0 +1,1 @@
+parse.sh: line 34:  8757 Segmentation fault      ./xparser -s $MODEL_DIR/model.xml
